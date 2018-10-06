@@ -1,0 +1,351 @@
+
+
+/*font family for all headers*/
+
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Georgia', Times, Times New Roman, serif;
+}
+
+/*main body height of 1000px and position relative*/
+.wrapper{
+	position: relative;
+	height: 1000px;
+
+
+}
+
+/*header menu background color when active*/
+li.about, li.portfolio, li.contact{
+	background-color: rgba(74, 170, 165, 0.5);
+}
+
+
+html, body{
+	margin:0 auto;
+	height: 100%;
+	position: relative;
+	font-size: 18px;
+	text-align: center;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+	background-image: url("../images/connectwork.png");
+}
+
+
+.header{
+	
+	position: fixed;
+	top: 0;
+ 	left: 0;
+	width: 100%;
+	height:75px;
+	background-color: white;
+	clear: both;
+	border-bottom: 1px solid black;
+}
+
+/*nav tag */
+
+
+nav{
+	width: 960px;
+	margin:0 auto;
+}
+
+*anchor tag viseted effect disabled*/
+a:visited {
+	color:#000;
+} 
+
+
+p.about{
+	line-height: 50px;
+}
+
+
+/*main header name box*/
+h1.name{
+	font-size: 20px;
+	padding: 19px 0;
+
+
+}
+.name{
+
+	margin-top: 15px;
+	float: left;
+	width: 200px;
+	height: 22px;
+	/*display: block;*/
+	background-color: #4aaaa5;
+	color: white;
+}
+
+.none:hover{
+	background-color: transparent;
+
+}
+
+/*Index & contact & portfolio content container and header section ***maybe change container to mainContent****/
+
+.container{
+	background-color: white;
+	width: 960px;
+	margin:0 auto;
+	text-align: left
+}
+
+.main{
+	background-color: white;
+	max-width: 960px;
+	margin:0 auto;
+	text-align: left;
+	padding:26px 92px;
+}
+
+/*main content heading /start/-- About me & contact and portfolio */
+
+.heading{
+	margin-bottom: 0; 
+	color: #4aaaa5;
+
+}
+
+hr{
+	margin:20px auto;
+	/*background-color: grey;*/
+	border-top: 2px solid lightgrey;
+
+}
+
+/*main content heading /ends/-- About me & contact and portfolio */
+
+/*about me page picture - floating left with spacing between image and text*/
+#profilePic{
+	float:left;
+	margin-right:30px;
+}
+
+
+
+/*columns and sections -- portfolio page */
+/*------------------------------- responsive menu styling*/
+
+
+/*hidden icon styling*/
+#menu-icon {
+	/*float: right;*/
+	display: hidden;
+	top:20px;
+	width: 40px;
+	height: 40px;
+	background: #43DDE5 url(../images/menu-icon.png) right;
+
+
+}
+
+
+/*hidden icon for responsive page*/
+
+
+a:hover#menu-icon {
+	border-radius: 4px 4px 0 0;
+	width: 40px;
+	height:40px;
+
+}
+/*unordered list styling*/
+
+ul {
+	position: relative;
+	float:right;
+	display: flex;
+	flex-direction: row;
+	line-height: 55px;
+    margin-left: 0px;
+    padding-left: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+	list-style: none;
+}
+
+
+/*list items styling*/
+li {
+
+	display: inline-block;
+	float: right;
+	padding: 10px ;
+	/*font-weight: 800;*/
+	font-size: 13px;
+	color: #777777
+
+
+}
+
+/*when hover on the menu items shaded in light blue */
+
+li:hover{
+	background-color: #4aaaa5;
+
+}
+
+
+
+/*responsive page when screen is 760px*/
+
+@media only screen and (max-width : 762px) {
+	.name{
+		margin-top: 15px;
+	}	
+
+
+
+	/*header {
+
+		position: absolute;
+
+	}*/
+
+	#menu-icon {
+		float: right;
+		display:inline-block;
+		margin-top: 22px;
+	}
+
+	nav ul, nav:active ul { 
+
+		display: none;
+		position: absolute;
+		padding: 20px;
+		background: #fff;
+		border: 5px solid #444;
+		right: 100px;
+		top: 50px;
+		width: 100px;
+		border-radius: 4px 0 4px 4px;
+
+	}
+
+	nav li {
+
+		text-align: center;
+		width: 100%;
+		padding: 10px 0;
+		margin: 0;
+
+	}
+
+	nav:hover ul {
+
+		display: block;
+
+	}
+	nav:hover li.none{
+		display: none;
+	}
+
+}
+
+
+
+
+/*portfolio page elements*/
+
+/*columns for the projects main content*/
+.column{
+	float: left;
+	margin: 4%;
+    width: 210px;
+	height: 210px;
+	/*background-color: black;	*/
+
+}
+
+/*background images*/
+#first{
+	background-image: url(../images/hangman.jpg);
+}
+#second{
+	background-image: url(../images/billiards.png);
+}
+#third{
+	background-image: url(../images/micky.jpg);
+}
+#fourth{
+	background-image: url(../images/street-fighter.jpg);
+}
+
+.row:after{
+	content: "";
+    display: table;
+    clear: both;
+}
+
+.boxName{
+	/*position: relative;*/
+	width: 100%;
+	height:50px;
+	margin-top: 136px;
+	text-align: center;
+	line-height: 50px;
+	background-color: #4aaaa5;
+	color: #eee;
+
+}
+
+/*responsive menu end code*/
+
+/*contact page*/
+
+/*form text color and padding*/
+form{
+	color: #777777;
+	padding: 13px 0;
+}
+
+
+/*message box height*/
+
+#message{
+	height:80px;
+}
+
+/*form elements with 100% width*/
+#name, #email,#message{
+	width: 100%;
+}
+
+/*changeing style for the submit button*/
+input#submit{
+	background-color: #4aaaa5;
+	color: white;
+	padding: 7px 17px;
+	border:0px;
+}
+/*-------------------------------------------Footer section*/
+
+div#footer{
+	/*position: absolute;*/
+    left:0;
+ 	bottom:0;
+	width: 100%;
+	height:75px;
+	text-align: center;
+	/*line-height: 86px;*/
+	vertical-align: bottom;
+	color: white;
+	background-color: #666666;
+	border-top: 3px solid #4aaaa5;
+	margin-top:23px;
+
+}
+
+.sticky{
+	position: absolute;
+	bottom: 0;
+}
+
+.copy{
+	margin-top: 51px;
+}
+

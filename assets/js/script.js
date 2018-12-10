@@ -1,3 +1,51 @@
+var config = {
+    apiKey: "AIzaSyBZRdcDcwmrAyN1dxnPVQ1DN3cu5ulf5c4",
+    authDomain: "portfolio-ccfdd.firebaseapp.com",
+    databaseURL: "https://portfolio-ccfdd.firebaseio.com",
+    projectId: "portfolio-ccfdd",
+    storageBucket: "",
+    messagingSenderId: "104875280453"
+  };
+  firebase.initializeApp(config);
+
+  var messagesRef = firebase.database().ref('messages')
+
+  document.getElementById('contactForm').addEventListener('submit', submitForm);
+  function submitForm(e){
+    e.preventDefault();
+
+    var name = getInputVal('name');
+    var email = getInputVal('email');
+    var phone = getInputVal('phone');
+    var message = getInputVal('message');
+
+
+    $('#name').val('');
+    $('#email').val('');
+    $('#phone').val('');
+    $('#message').val('');
+
+    saveMessage(name,email,phone,message);
+
+    document.querySelector('.alert').style.display = 'block';
+    setTimeout(function(){
+      document.querySelector('.alert').style.display = 'none';
+    },3000)
+  }
+
+  function getInputVal(id){
+    return document.getElementById(id).value;
+  }
+
+  function saveMessage(name,email,phone,message){
+    var newMessageRef = messagesRef.push();
+    newMessageRef.set({
+      name:name,
+      email:email,
+      phone:phone,
+      message:message
+    })
+  }
 // text effect
 var TxtRotate = function(el, toRotate, period) {
   this.toRotate = toRotate;
@@ -108,6 +156,39 @@ window.onload = function() {
   })
 
 })(jQuery); // End of use strict
+
+
+
+$("#navAbout").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top
+    }, 2000);
+});
+$("#navResume").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#resume").offset().top
+    }, 2000);
+});
+$("#navSkills").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#skills").offset().top
+    }, 2000);
+});
+$("#navPortfolio").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#portfolio").offset().top
+    }, 2000);
+});
+$("#navContact").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#contact").offset().top
+    }, 2000);
+});
+$("#learnMore").click(function() {
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top
+    }, 1000);
+});
 
 
 

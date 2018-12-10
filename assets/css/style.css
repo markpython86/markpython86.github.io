@@ -686,6 +686,13 @@ hr.style-seven:before { /* Not really supposed to work, but does */
 
 
 /* contact section */
+.alert{
+  background-color: #097F61;
+  color:white;
+  width: 50%;
+  margin: 50px auto;
+  display:none;
+}
 section#contact {
   background-color: #212529;
   background-image: url("../img/contact.jpg");

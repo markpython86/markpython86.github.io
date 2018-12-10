@@ -1,12 +1,17 @@
-var config = {
-    apiKey: "AIzaSyBZRdcDcwmrAyN1dxnPVQ1DN3cu5ulf5c4",
-    authDomain: "portfolio-ccfdd.firebaseapp.com",
-    databaseURL: "https://portfolio-ccfdd.firebaseio.com",
-    projectId: "portfolio-ccfdd",
+var configDB = {
+    apiKey: config.apiKey,
+    authDomain: config.authDomain,
+    databaseURL: config.databaseURL,
+    projectId: config.projectId,
     storageBucket: "",
-    messagingSenderId: "104875280453"
+    messagingSenderId: config.messagingSenderId
   };
-  firebase.initializeApp(config);
+
+
+
+firebase.initializeApp(configDB);
+
+
 
   var messagesRef = firebase.database().ref('messages')
 

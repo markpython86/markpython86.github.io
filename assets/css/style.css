@@ -253,7 +253,7 @@ header.wlcmMsg .main-text .welcome-mid {
 }
 
 header.wlcmMsg .main-text .tpwrt-effect {
-    font-size: 22px;
+    font-size: 4vw;
   /* font-style: italic; */
   line-height: 0;
   margin-bottom: 90px;
@@ -282,7 +282,7 @@ header.wlcmMsg .main-text .tpwrt-effect {
     font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   }
   header.wlcmMsg .main-text .tpwrt-effect {
-    font-size: 40px;
+    font-size: 4vw;
     /* font-style: italic; */
     line-height: 0px;
     margin-bottom: 80px;
